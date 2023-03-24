@@ -1,6 +1,7 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-rails
-  - rubocop-rspec
 AllCops:
   Exclude:
     - db/schema.rb
@@ -14,7 +15,6 @@ Metrics/BlockLength:
   Exclude:
     - Rakefile
     - '**/*.rake'
-    - 'spec/**/*.rb'
 Metrics/AbcSize:
   Max: 50
 Metrics/CyclomaticComplexity:
@@ -29,12 +29,6 @@ Style/Documentation:
   Exclude:
     - 'app/**/*.rb'
 
-RSpec/NestedGroups:
-  Max: 7
-RSpec/MultipleMemoizedHelpers:
-  Max: 7
-RSpec/MultipleExpectations:
-  Enabled: false
 GlobalVars:
   AllowedVariables:
     - $redis_rider

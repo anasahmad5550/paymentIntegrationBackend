@@ -70,7 +70,11 @@ GEM
     bcrypt (3.1.18)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    brakeman (5.4.1)
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
@@ -118,6 +122,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     parallel (1.22.1)
     parser (3.2.1.0)
@@ -178,7 +184,13 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.27.0)
       parser (>= 3.2.1.0)
+    rubocop-rails (2.18.0)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.11.0)
+    ruby_audit (2.2.0)
+      bundler-audit (~> 0.9.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -202,10 +214,13 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.13)
   bootsnap
+  brakeman
+  bundler-audit
   debug
   graphiql-rails
   graphql
@@ -214,6 +229,8 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.0.4, >= 7.0.4.2)
   rubocop
+  rubocop-rails
+  ruby_audit
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
@@ -222,4 +239,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.4.7
+   2.4.9

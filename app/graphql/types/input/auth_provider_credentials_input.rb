@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 module Types
-    module Input
-        class AuthProviderCredentialsInput < Types::BaseInputObject
-            # the name is usually inferred by class name but can be overwritten
-            graphql_name 'AUTH_PROVIDER_CREDENTIALS'
-        
-            argument :email, String, required: true
-            argument :password, String, required: true
-        end
+  module Input
+    class AuthProviderCredentialsInput < Types::BaseInputObject
+      # the name is usually inferred by class name but can be overwritten
+      graphql_name 'AUTH_PROVIDER_CREDENTIALS'
+
+      argument :email, String, required: true
+      argument :password, String, required: true
     end
+  end
 end
